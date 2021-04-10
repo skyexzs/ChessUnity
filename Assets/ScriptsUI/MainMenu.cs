@@ -107,14 +107,19 @@ namespace UIScripts {
         {
             CanvasGroup canvasGroup = this.GetComponent<CanvasGroup>();
             canvasGroup.alpha = 0f;
-            canvasGroup.blocksRaycasts = true;
+            canvasGroup.blocksRaycasts = false;
         }
 
         public void Show()
         {
             CanvasGroup canvasGroup = this.GetComponent<CanvasGroup>();
             canvasGroup.alpha = 1f;
-            canvasGroup.blocksRaycasts = false;
+            canvasGroup.blocksRaycasts = true;
+        }
+
+        public void GoToMainMenu()
+        {
+            SceneManager.LoadScene(0);
         }
 
         public void SetBrightness (bool _isBright) { isBright = _isBright; }
